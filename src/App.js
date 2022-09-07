@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Brandpage from "./pages/Brandspage";
+import Allcategories from "./pages/Categoriespage";
+import Main from "./pages/Main/Main";
+import Singleproductpage from "./pages/Main/[id]";
+import Categoriespage from "./pages/Main/[slug]";
+import Result from "./pages/Result";
+import Head from "./parts/Head";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Head />
+      <Routes>
+        <Route exact path="/" element={<Main />} />
+        <Route exact path="/categories/:slug" element={<Categoriespage />} />
+        <Route exact path="/product/:id" element={<Singleproductpage />} />
+        <Route exact path="/categoriespage" element={<Allcategories />} />
+        <Route exact path="/brandspage" element={<Brandpage />} />
+        <Route exact path="/result" element={<Result />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
-
 export default App;
