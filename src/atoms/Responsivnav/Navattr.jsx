@@ -1,12 +1,12 @@
 import React from 'react'
-import {  useSelector } from 'react-redux';
+
 import Logo from '../Navbar/Logo';
 import Info from '../../components/Header/Info';
 import Adduser from '../../components/Header/Adduser';
 
 function Navattr() {
  
-    
+
     return (
         <div className='h-screen px-4' >
             <div className='flex justify-between items-center w-full'>
