@@ -2,7 +2,7 @@ import React from 'react'
 
 function Sliderimg({ url }) {
     return (
-        <img className='h-full rounded-sm' src={url} />
+        <img alt='that is the most important product appearnace' className='h-full rounded-sm' src={url} />
     )
 }
 

@@ -17,7 +17,7 @@ function Categoriespage() {
 
 
 
-  }, []);
+  });
 
   console.log(products !== null && products.products)
   return (

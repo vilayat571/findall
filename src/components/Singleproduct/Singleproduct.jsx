@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Images from './Images'
+
 
 function Singleproduct({ product }) {
   const [ind, setInd] = useState(0)

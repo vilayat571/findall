@@ -1,5 +1,4 @@
 import React from 'react';
-import Addtocart from '../../components/Addtocart/Addtocart';
 import Action from './Action';
 import Credit from './Credit';
 import Diver from './Diver';
@@ -51,11 +50,7 @@ function Productcart({ product }) {
                     </>
                 } />
 
-              {/*   <Diver inner={
-                    <>
-                        <Addtocart product={product} />
-                    </>
-                } /> */}
+           
 
             </div>
 

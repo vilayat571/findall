@@ -5,7 +5,8 @@ import Info from '../../components/Header/Info';
 import Adduser from '../../components/Header/Adduser';
 
 function Navattr() {
-    const open = useSelector((state) => state.changeReducer.open);
+ 
+    
     return (
         <div className='h-screen px-4' >
             <div className='flex justify-between items-center w-full'>
