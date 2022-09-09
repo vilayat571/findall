@@ -1,11 +1,14 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-function Placatim({ url }) {
+function Placatim({ url, ateq }) {
     return (
-        <img
-        alt={"this is product appearance "}
-            className='h-full w-full rounded-sm '
-            src={url} />
+        <Link to={ateq}>
+            <img
+                alt={"this is product appearance "}
+                className='h-full w-full rounded-sm '
+                src={url} />
+        </Link>
     )
 }
 

@@ -31,7 +31,7 @@ function Searchbar() {
                     onChange={(e) => handleChange(e)}
                     className=' h-13 py-1 rounded-tl rounded-bl
                  outline-none border-[1px] border-[#e5e5e5] w-full indent-3
-                 text-black text-sm '
+                 text-[#303030] text-sm '
                     placeholder='Search Here...'
                 />
                 <button className='h-12 outline-none bg-[#303030] text-white

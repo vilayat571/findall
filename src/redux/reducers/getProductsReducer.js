@@ -2,7 +2,8 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 export const fetchProducts = createAsyncThunk('/fetchProducts/', async (limit) => {
     const url =
-        `https://dummyjson.com/products?limit=${limit}&skip=1&select=title,price,thumbnail,images,discountPercentage,rating,brand`;
+        `https://dummyjson.com/products?limit=${limit}&skip=60&select=
+        title,price,thumbnail,images,discountPercentage,rating,brand`;
     const res = await fetch(url);
     const data = await res.json();
     return data;

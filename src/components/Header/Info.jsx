@@ -11,7 +11,7 @@ function Info() {
             <Contact icon={<i className="text-[17px] text-[#303030] fa-solid fa-headset"></i>}
                 text={"+994 (50) 890-87-27"} />
             {
-                open ? " " : <div className="border-[1px] border-[#c0c0c0] h-5">
+                open ? " " : <div className="border-[1px] border-[#303030] h-5">
 
                 </div>
             }

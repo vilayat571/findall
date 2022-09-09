@@ -1,7 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
 import changeReducer from "../reducers/changeReducer";
+import getBrandsReducer from "../reducers/getBrandsReducer";
 import getCategoriesReducer from "../reducers/getCategoriesReducer";
 import getProductsReducer from "../reducers/getProductsReducer";
+import getSellerReducer from "../reducers/getSellerReducer";
 import searchProductsReducer from "../reducers/searchProductsReducer";
 
 export const store = configureStore({
@@ -9,6 +11,8 @@ export const store = configureStore({
         getCategoriesReducer: getCategoriesReducer,
         getProductsReducer: getProductsReducer,
         changeReducer:changeReducer,
-        searchProductsReducer:searchProductsReducer
+        searchProductsReducer:searchProductsReducer,
+        getBrandsReducer:getBrandsReducer,
+        getSellerReducer:getSellerReducer
     }
 });

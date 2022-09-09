@@ -2,10 +2,11 @@ import React from 'react'
 import { useSelector } from 'react-redux';
 
 function Contact({ icon, text }) {
+
     const open = useSelector((state) => state.changeReducer.open);
 
     return (
-        <div className={
+        <div title='icon' id='icon' className={
             open ?  "flex justify-between items-center text-xs font-medium"
             :  "flex justify-between items-center text-xs font-medium mx-4"
         }>

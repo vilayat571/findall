@@ -1,10 +1,10 @@
 import Placatim from "./Placatim"
 
 
-function Placatcart({ url }) {
+function Placatcart({ url,ateq }) {
   return (
     <div className=' h-[128px] w-full ml-2 mb-2'>
-      <Placatim url={url} />
+      <Placatim ateq={ateq} url={url} />
     </div>
   )
 }
