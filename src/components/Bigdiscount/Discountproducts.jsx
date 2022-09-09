@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 
 function Discountproducts() {
 
-    const dispatch=useDispatch()
+ /*    const dispatch=useDispatch() */
 
     return (
         <div>
