@@ -11,7 +11,7 @@ function Contact({ icon, text }) {
             :  "flex justify-between items-center text-xs font-medium mx-4"
         }>
             {icon}
-            <span className="px-2 text-[#303030]">{text}</span>
+            <span className="px-2 text-[13px] text-[#303030]">{text}</span>
         </div>
     )
 }

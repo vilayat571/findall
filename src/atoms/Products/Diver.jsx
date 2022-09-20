@@ -1,5 +1,3 @@
-import React from 'react'
-
 function Diver({inner}) {
   return (
     <div className='flex justify-between items-center mt-4'>
@@ -8,4 +6,4 @@ function Diver({inner}) {
   )
 }
 
-export default Diver
+export default Diver;

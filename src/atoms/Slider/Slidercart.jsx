@@ -1,5 +1,5 @@
-import React from 'react'
-import Sliderimg from './Sliderimg'
+import React from 'react';
+import Sliderimg from './Sliderimg';
 
 function Slidercart({ url }) {
     return (
@@ -9,4 +9,4 @@ function Slidercart({ url }) {
     )
 }
 
-export default Slidercart
+export default React.memo(Slidercart);

@@ -1,39 +1,38 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux'
-import { Link } from 'react-router-dom';
-import Productcart from '../../atoms/Products/Productcart';
+import Button from '../../atoms/Products/Button';
 import { getBestSeller } from '../../redux/reducers/getSellerReducer';
+import Bestbut from './Bestbut';
+import Bestproductdiv from './Bestproductdiv';
 
 
 function Bestsellerproducts() {
 
     const dispatch = useDispatch();
-
-    const data = useSelector((state) => state.getSellerReducer.data);
+    const [count, setCount] = useState(23);
+    const data = useSelector((state) => state.getSellerReducer.bestSeller);
+    const fileteredData =data.length>0 && data.filter((item) => {
+        return item.rating > 4.5
+    });
 
     useEffect(() => {
+        dispatch(getBestSeller(count));
+    }, [dispatch, count]);
 
-        dispatch(getBestSeller(30));
-
-    }, [dispatch])
+    const increaseLimit = () => {
+        setCount(count + 5)
+        dispatch(getBestSeller(count));
+    };
 
 
     return (
-        <div className='mt-10 gap-2 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-5'>
-            {
-                data.length > 0 ? data.map((product, index) => {
-                    return (
-
-                        <Link key={index} to={`/product/${product.id}`}>
-                            <Productcart key={index} product={product} />
-                        </Link>
-
-
-                    )
-                }) : 'Loading'
-            }
+        <div className="flex flex-col">
+            <Bestproductdiv data={fileteredData} />
+            <Bestbut>
+                <Button count={0} func={() => increaseLimit()} />
+            </Bestbut>
         </div>
     )
 }
 
-export default Bestsellerproducts
+export default React.memo(Bestsellerproducts);

@@ -1,34 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Poppins&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito&family=Poppins&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer utilities {
-    /* Chrome, Safari and Opera */
-    .no-scrollbar::-webkit-scrollbar {
-      display: none;
-    }
 
-    .no-scrollbar {
-      -ms-overflow-style: none; /* IE and Edge */
-      scrollbar-width: none; /* Firefox */
-    }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Nunito', sans-serif;
-    font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+
 }
 
 body {
-    overflow-x: hidden;
-    background-color: #f7f7f7;
-}
-
-.carousel .thumb{
-  display: none;
+  overflow-x: hidden;
+  background-color: #ffffff;
 }

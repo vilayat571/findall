@@ -1,12 +1,11 @@
-import React from 'react'
 import RealPrice from './Realprice'
 
-function Prices({price}) {
+function Prices({ price }) {
   return (
-    <span  className='font-bold text-[#e91e63]'>
-    {price} ₼ <RealPrice price={price} />
-  </span>
+    <span className='font-bold text-[#292929]'>
+      {price} ₼ <RealPrice price={price} />
+    </span>
   )
 }
 
-export default Prices
+export default Prices;

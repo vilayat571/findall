@@ -1,5 +1,5 @@
-import Placatim from "./Placatim"
-
+import Placatim from "./Placatim";
+import React from 'react';
 
 function Placatcart({ url,ateq }) {
   return (
@@ -9,4 +9,4 @@ function Placatcart({ url,ateq }) {
   )
 }
 
-export default Placatcart
+export default React.memo(Placatcart);

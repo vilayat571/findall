@@ -1,5 +1,4 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 function Placatim({ url, ateq }) {
     return (
@@ -12,4 +11,4 @@ function Placatim({ url, ateq }) {
     )
 }
 
-export default Placatim
+export default Placatim;

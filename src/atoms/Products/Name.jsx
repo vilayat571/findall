@@ -1,5 +1,3 @@
-import React from 'react'
-
 function Name({title,brand}) {
   return (
     <span  className='text-[#303030] text-sm '>
@@ -8,4 +6,4 @@ function Name({title,brand}) {
   )
 }
 
-export default Name
+export default Name;

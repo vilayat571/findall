@@ -7,7 +7,7 @@ import banner3 from '../../assets/images/banner3.png';
 function Placat() {
     
     return (
-        <div className='sm:w-full md:block sm:hidden md:flex-col
+        <div className='sm:w-full md:hidden lg:block sm:hidden md:flex-col
          justify-between items-center sm:flex-row md:w-[29%]'>
             <Placatcart ateq={"/categories/womens-watches"} url={banner1} />
             <Placatcart ateq={"/categories/automotive"} url={banner2} />
@@ -16,4 +16,4 @@ function Placat() {
     )
 }
 
-export default Placat;
+export default React.memo(Placat);

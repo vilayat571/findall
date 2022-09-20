@@ -1,39 +1,34 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux'
-import { Link } from 'react-router-dom';
 import Button from '../../atoms/Products/Button';
-import Productcart from '../../atoms/Products/Productcart';
 import { fetchProducts } from '../../redux/reducers/getProductsReducer';
+import Proddiv from './Proddiv';
 
 function Allproducts() {
 
-
-
   const dispatch = useDispatch();
+  const [count, setCount] = useState(10);
   const products = useSelector((state) => state.getProductsReducer.products);
+
   useEffect(() => {
-    dispatch(fetchProducts(25));
-  }, [dispatch]);
+    dispatch(fetchProducts(count));
+  }, [dispatch, count]);
+
+  const increaseLimit = () => {
+    count <= 25 && setCount(count + 5)
+    dispatch(fetchProducts(count));
+  };
 
   return (
-    <div className="flex flex-col">
-      <div className='mt-10 gap-2 grid  sm:grid-cols-1 md:grid-cols-5'>
-        {
-          products.length > 0 ? products.map((product, index) => {
-            return (
-              <Link key={index} to={`/product/${product.id}`}>
-                <Productcart key={index} product={product} />
-              </Link>
-            )
-          }) : 'Loading'
-        }
-      </div>
-      <div className='border-4 flex justify-center items-center h-16 mt-8'>
-        <Button />
+
+    <div className="flex flex-col mt-10">
+      <Proddiv products={products} />
+      <div className='flex justify-center items-center h-16 mt-4'>
+        <Button count={count} func={() => increaseLimit()} />
       </div>
     </div>
+
   )
 }
-
-export default Allproducts
+export default Allproducts;

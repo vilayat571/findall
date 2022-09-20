@@ -1,5 +1,5 @@
-import React from 'react'
-import Redirecting from '../../atoms/Singleproduct/Redirecting'
+import React from 'react';
+import Redirecting from '../../atoms/Singleproduct/Redirecting';
 
 function Desciptionroad({ product }) {
 
@@ -16,4 +16,4 @@ function Desciptionroad({ product }) {
     )
 }
 
-export default Desciptionroad
+export default React.memo(Desciptionroad);

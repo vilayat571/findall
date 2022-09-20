@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 import Placat from '../Badge/Placat';
@@ -11,7 +11,7 @@ function Slider() {
   return (
     <div className='sm:h-[220px] md:h-[400px] sm:full md:mx-0 flex md:flex-row sm:flex-col relative sm:top-0 md:top-1
       md:mt-0 sm:mt-4 md:w-full '>
-      <Carousel showThumbs={false} className='md:w-[70%] sm:w-full' dynamicHeight={true} interval={1000} >
+      <Carousel showThumbs={false} autoPlay={true} dynamicHeight={true} interval={3000} transitionTime={1000} autoFocus={true} className='lg:w-[70%] md:w-full sm:w-full'>
         <Slidercart url={slide3} />
         <Slidercart url={slide2} />
         <Slidercart url={slide1} />
@@ -21,4 +21,4 @@ function Slider() {
   )
 }
 
-export default Slider
+export default React.memo(Slider);

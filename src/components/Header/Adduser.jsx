@@ -1,22 +1,20 @@
-import Linked from "../../atoms/Header/Linked";
-import Location from "../../atoms/Header/Location";
-import React from 'react'
+import React from 'react';
+import Loglink from './Loglink';
+import Logout from "./Logout";
 
 function Adduser() {
+
+    const data = localStorage.getItem('userDetails');
+    const userDetails = JSON.parse(data);
+
+    const token = userDetails !== null && userDetails !== undefined && userDetails.token;
+
     return (
         <div className="w-auto px-2 flex text-light items-center h-12">
-            <Location icon={<i className="fa-solid fa-location-dot text-[17px] text-[#303030]"></i>}
-                url={"/about"}
-                text={"Store location "} />
             <div className="w-auto px-2 flex text-light items-center h-12">
-                <div className="border-[1px] border-[#303030] h-5"></div>
-                <Linked icon={<i className="fa-solid fa-arrow-right-to-bracket text-[17px] text-[#303030]"></i>}
-                    url={"/signin"}
-                    text={"Sign in"} />
-                <div className="border-[1px] border-[#303030] h-5"></div>
-                <Linked icon={<i className="fa-solid fa-right-to-bracket text-[17px] text-[#303030]"></i>}
-                    url={"/signup"}
-                    text={"Sign up"} />
+                {
+                    token ? <Logout /> : <Loglink />
+                }
             </div>
         </div>
     )

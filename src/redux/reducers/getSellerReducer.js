@@ -1,10 +1,9 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 
-export const getBestSeller = createAsyncThunk('/getBestSeller/', async () => {
-    const url =
-    `https://dummyjson.com/products?limit=10&skip=60&select=title,price,thumbnail,images,discountPercentage,rating,brand,category`;
+export const getBestSeller = createAsyncThunk('/getBestSeller/', async (limit) => {
 
+    const url = `https://dummyjson.com/products?limit=${limit}&skip=30&select=title,price,thumbnail,images,discountPercentage,rating,brand,category`;
 
     const res = await fetch(url);
 
@@ -17,7 +16,7 @@ export const getBestSeller = createAsyncThunk('/getBestSeller/', async () => {
 const getSellerReducer = createSlice({
     name: 'getSellerReducer',
     initialState: {
-        data: [],
+        bestSeller: [],
         situation: {
             isLoading: false,
             error: null
@@ -30,8 +29,7 @@ const getSellerReducer = createSlice({
         },
         [getBestSeller.fulfilled]: (state, action) => {
             state.situation.isLoading = false;
-            state.data = action.payload.products;
-            state.situation.isLoading = null;
+            state.bestSeller = action.payload.products;
         },
         [getBestSeller.rejected]: (state, action) => {
             state.situation.isLoading = false;

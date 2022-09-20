@@ -1,0 +1,68 @@
+{
+    "keywords1": [
+        {
+            "id": 1,
+            "text": "Directory"
+        },
+        {
+            "id": 2,
+            "text": "Useful links"
+        },
+        {
+            "id": 3,
+            "text": "Help"
+        }
+    ],
+    "keywords2": [
+        {
+            "id": 1,
+            "text": "Pages",
+            "url": "/"
+        },
+        {
+            "id": 2,
+            "text": "About",
+            "url": "/about"
+        },
+        {
+            "id": 5,
+            "text": "Contact",
+            "url": "/about/contact"
+        }
+    ],
+    "keywords3": [
+        {
+            "id": 1,
+            "text": "Help",
+            "url": "#"
+        },
+        {
+            "id": 4,
+            "text": "Sign in",
+            "url": "/signin"
+        },
+        {
+            "id": 5,
+            "text": "Sign up",
+            "url": "/signup"
+        }
+    ],
+    "keywords4": [
+        {
+            "id": 0,
+            "text": "Findall."
+        },
+        {
+            "id": 1,
+            "text": "1530"
+        },
+        {
+            "id": 2,
+            "text": "hello@findall.com"
+        },
+        {
+            "id": 3,
+            "text": "Baku,Azerbaijan"
+        }
+    ]
+}

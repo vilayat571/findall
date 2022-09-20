@@ -1,9 +1,9 @@
-import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { changeOpen } from '../../redux/reducers/changeReducer';
 import Navattr from './Navattr';
 
 function Responsivnav() {
+  
   const open = useSelector((state) => state.changeReducer.open);
   const dispatch = useDispatch();
   const handleChange = () => {
@@ -29,4 +29,4 @@ function Responsivnav() {
   )
 }
 
-export default Responsivnav
+export default Responsivnav;

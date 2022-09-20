@@ -1,5 +1,4 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 function Redirecting({text,url}) {
   return (
@@ -9,4 +8,4 @@ function Redirecting({text,url}) {
   )
 }
 
-export default Redirecting
+export default Redirecting;

@@ -1,9 +1,9 @@
-import React from 'react'
 import { useSelector } from 'react-redux';
-import Logo from '../../atoms/Navbar/Logo'
-import Responsivnav from '../../atoms/Responsivnav/Responsivnav'
+import Logo from '../../atoms/Navbar/Logo';
+import Responsivnav from '../../atoms/Responsivnav/Responsivnav';
 
 function ResNav() {
+  
     const open = useSelector((state) => state.changeReducer.open);
 
   return (
@@ -17,4 +17,4 @@ function ResNav() {
   )
 }
 
-export default ResNav
+export default ResNav;
