@@ -10,7 +10,7 @@ function Result() {
 
   return (
     <Layout>
-      <div className="bg-[#f7f7f7] px-16 py-8 mt-10 ">
+      <div className="bg-[#fff] lg:px-16 sm:px-6 md:px-16 py-8 mt-10 ">
         <Title text={`Products matching the search:${data.length}`} />
         <Allresult data={data} />
       </div>

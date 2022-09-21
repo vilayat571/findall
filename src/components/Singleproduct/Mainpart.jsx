@@ -2,16 +2,16 @@ import React from 'react';
 import Singleproduct from './Singleproduct';
 import Desciptionroad from './Desciptionroad';
 
-function Mainpart({ data }) {
+function Mainpart({ idProd }) {
 
     return (
         <div className='w-full justify-center items-center flex '>
             <div className=' w-[92%]'>
                 {
-                    data !== null ? <Desciptionroad product={data} /> : 'Loading'
+                    idProd !== null ? <Desciptionroad specify={idProd} /> : 'Loading'
                 }
                 {
-                    data !== null ? <Singleproduct product={data} /> : 'Loading'
+                    idProd !== null ? <Singleproduct specify={idProd} /> : 'Loading'
                 }
             </div>
         </div>

@@ -30,7 +30,7 @@ function Signup() {
     <Layout>
       <div className='w-full h-screen bg-[#fff] py-16 flex justify-center items-center'>
         <form onSubmit={(e) => handleSubmit(e)}
-          className=' w-7/12 pb-12 pt-20 px-4 rounded-sm border-none outline-none 
+          className='sm:w-full md:w-2/3 lg:w-7/12 pb-12 pt-20 px-4 rounded-sm border-none outline-none 
         shadow-sm bg-[#fff]
         flex flex-col justify-center items-center
         '>

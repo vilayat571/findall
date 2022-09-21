@@ -24,7 +24,7 @@ function Navform() {
     };
 
     return (
-        <form onSubmit={(e) => handleSubmit(e)} className='w-[97%] relative left-4 flex sm:my-3 md:my-0 '>
+        <form onSubmit={(e) => handleSubmit(e)} className='sm:w-full lg:w-[97%] flex sm:my-3 md:my-0 '>
             <Navinp val={query} func={(e) => handleChange(e)} />
             <Navbut />
         </form>

@@ -19,7 +19,9 @@ function Navpart() {
   return (
     <div className="md:w-full 
     lg:flex-row md:flex-row sm:flex-col
-    relative sm:left-0 md:left-2 justify-between sm:w-auto flex text-light sm:items-start lg:mr-0 sm:mr-6 lg:items-center h-14" >
+    relative sm:left-0 md:left-2
+     justify-between sm:w-auto 
+      text-light sm:items-start lg:mr-0 sm:mr-6 flex md:items-center lg:items-center h-14" >
 
       <Linked icon={<i className="fa-solid fa-user text-[16px] text-[#303030]"></i>}
         url={"/myaccount"} text={firstname ? firstname : 'Account'}

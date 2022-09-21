@@ -1,4 +1,4 @@
-function Navinp({val,func}) {
+function Navinp({ val, func }) {
     return (
         <input value={val} type="text"
             onChange={func}

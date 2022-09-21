@@ -11,7 +11,7 @@ function Adduser() {
 
     return (
         <div className="w-auto px-2 flex text-light items-center h-12">
-            <div className="w-auto px-2 flex text-light items-center h-12">
+            <div className="w-auto px-2 sm:flex-col md:flex-row lg:flex-row flex text-light items-center h-12">
                 {
                     token ? <Logout /> : <Loglink />
                 }

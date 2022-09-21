@@ -16,11 +16,12 @@ function Categoriespage() {
       .then((res) => res.json())
       .then((data) => setProducts(data));
 
-  }, [products, slug]);
+  }, [slug]);
+
 
   return (
     <Layout>
-      <div className='px-14 h-auto py-20 '>
+      <div className='md:px-5 sm:px-5 lg:px-14 h-auto py-20 '>
         <Categorytitle text={`${slug}`} />
         <Sldiv products={products} />
       </div>

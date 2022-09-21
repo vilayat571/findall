@@ -11,8 +11,15 @@ export const fetchUsercart = createAsyncThunk('/fetchUsercart/', async () => {
     const id = userDetails !== null && userDetails !== undefined && userDetails.id;
     if (id) {
 
-        return fetch('https://dummyjson.com/carts/1')
-            .then(res => res.json());
+      const url='https://dummyjson.com/carts/1';
+
+      const res=await fetch(url);
+
+      const data=await res.json();
+
+      return data;
+
+
     }
 
     return { message: "user was not sign in" }

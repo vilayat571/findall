@@ -29,14 +29,13 @@ function Signin() {
     dispatch(getLogin({ username: form.username, password: form.password }));
 
 
-  }
+  };
 
   return (
     <Layout>
       <div className='w-full h-screen bg-[#fff] py-16 flex justify-center items-center'>
         <form onSubmit={(e) => handleSubmit(e)}
-          className=' w-5/12 pb-12 pt-20 px-4 rounded-sm border-none outline-none 
-        shadow-sm bg-[#fff]
+          className=' sm:w-full md:w-2/3 lg:w-5/12 pb-12 pt-20 px-4 rounded-sm border-none outline-none 
         flex flex-col justify-center items-center
         '>
           <div className="w-full flex-flex-col h-84  justify-between items-center">
