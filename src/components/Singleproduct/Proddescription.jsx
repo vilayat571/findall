@@ -5,7 +5,7 @@ function Proddescription({ spIfy }) {
 
     return (
         <div className='lg:mt-0 sm:mt-12 sm:ml-0 lg:ml-20 md:ml-20 flex flex-col justify-between h-90'>
-            <span className='text-xl font-bold tracking-[1px]'> {spIfy.title}</span>
+            <span className='text-xl font-bold tracking-[1px] capitalize'> {spIfy.title}</span>
             <span className='mt-3 text-sm'>Rating : {spIfy.rating}</span>
             <span className='mt-3 text-sm'>Brand : {spIfy.brand}</span>
             <span className='text-lg mt-4 font-extrabold'> <Prices price={spIfy.price} /></span>
