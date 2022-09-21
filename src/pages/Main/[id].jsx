@@ -18,7 +18,7 @@ function Singleproductpage() {
   return (
     <Layout>
       <div className='h-auto '>
-        <div className='mt-4'>
+        <div className='mt-4 mb-10'>
           <Mainpart idProd={idProd} />
         </div>
       </div>
