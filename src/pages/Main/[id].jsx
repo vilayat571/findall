@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import Relatedresult from '../../components/Relatedproducts/Relatedresult';
 import Mainpart from '../../components/Singleproduct/Mainpart';
 import Layout from '../../layout/Layout';
 
@@ -21,9 +20,6 @@ function Singleproductpage() {
       <div className='h-auto '>
         <div className='mt-4'>
           <Mainpart idProd={idProd} />
-        </div>
-        <div>
-          <Relatedresult idProd={idProd} />
         </div>
       </div>
     </Layout>
